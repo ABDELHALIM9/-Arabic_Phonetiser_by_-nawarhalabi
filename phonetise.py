@@ -276,7 +276,7 @@ for utterance in utterances:
 				iterations = 1
 				for index, letter in enumerate(phones):
 					if(isinstance(letter, list)):
-						curIndex = (i / iterations) % len(letter)
+						curIndex = int((i / iterations) % len(letter))
 						if(letter[curIndex] != u''):
 							pronunciations[i].append(letter[curIndex])
 						iterations = iterations * len(letter)
